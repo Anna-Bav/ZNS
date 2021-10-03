@@ -3,3 +3,13 @@
   height: 816px;
   background: #001429;
 }
+.icons {
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 25px;
+  color: #919eab;
+  cursor: pointer;
+}
