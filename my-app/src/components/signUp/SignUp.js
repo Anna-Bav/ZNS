@@ -1,12 +1,15 @@
 import React from 'react'
+import './SignUp.css'
+import { farBars } from "@fortawesome/free-regular-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default function SignUp(){
     return(
 
     <div>
-        <h1>
-            SignUp
-        </h1>
+        <nav className='navigation'>
+        <FontAwesomeIcon icon={farBars} />
+        </nav>
     </div>
     )
 }

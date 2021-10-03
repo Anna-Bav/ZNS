@@ -35,13 +35,13 @@ export default function Login(){
 
     return(
         <div>
-            <h1>Login</h1>
-            {(emailDirty && emailError)} <div style={{color:'red'}}>{emailError}</div>
+            <h1 className='login'>Зарегистрироваться</h1>
+            {(emailDirty && emailError) && <div style={{color:'red'}}>{emailError}</div>}
             <div className='inputEmail'><input onBlur = {e => blurHandler(e)} name='email' type='text' placeholder='email' onChange={(e)=>setEmail(e.target.value)}/></div>
-            {(passwordDirty && passwordError)} <div style={{color:'red'}}>{passwordError}</div>
-            <div><input onBlur = {e => blurHandler(e)} name='password'  type='text' placeholder='password' onChange={(e)=>setPassword(e.target.value)}/></div>
-            <div><input type='text' placeholder='name' onChange={(e)=>setName(e.target.value)}/></div>
-            <Link to='/signup'><button>Зарегистрироваться</button></Link>
+            {(passwordDirty && passwordError) && <div style={{color:'red'}}>{passwordError}</div>}
+            <div className='inputPassword'><input onBlur = {e => blurHandler(e)} name='password'  type='text' placeholder='password' onChange={(e)=>setPassword(e.target.value)}/></div>
+            <div class='inputName'><input type='text' placeholder='name' onChange={(e)=>setName(e.target.value)}/></div>
+            <Link className='button' to='/signup'><button>Зарегистрироваться</button></Link>
 
         </div>
     )
