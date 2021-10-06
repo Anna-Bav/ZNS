@@ -1,3 +1,8 @@
+.page {
+  margin: 0 auto;
+  box-sizing: border-box;
+  display: flex;
+}
 .navigation {
   width: 72px;
   height: 816px;
@@ -12,4 +17,112 @@
   font-size: 25px;
   color: #919eab;
   cursor: pointer;
+}
+.main {
+  width: 1294px;
+  height: 816px;
+  display: flex;
+  flex-direction: column;
+}
+.search {
+  width: 1294px;
+  height: 72px;
+  display: flex;
+  align-items: center;
+  /* justify-content: space-around; */
+}
+.av {
+  width: 40px;
+  border-radius: 10px;
+  margin-left: 42px;
+  /* margin-top: 15px; */
+}
+.name {
+  font-size: 19px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  margin-left: 15px;
+  color: #384047;
+}
+.inputSearch {
+  display: flex;
+  align-items: center;
+  width: 660px;
+  height: 38px;
+  background: #f8f8f8;
+  border: none;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 400;
+  font-family: "Lato", sans-serif;
+  margin-left: 146px;
+}
+.imgSearch {
+  margin-left: 21px;
+  color: #acadad;
+}
+.fieldSearch {
+  width: 308px;
+  height: 20px;
+  font-size: 15px;
+  font-weight: 400;
+  font-family: "Lato", sans-serif;
+  border: none;
+  background: #f8f8f8;
+  margin-left: 13px;
+}
+.imgSettings {
+  width: 20px;
+  margin-left: 260px;
+  color: #aab4bd;
+  cursor: pointer;
+}
+.content {
+  width: 1294px;
+  height: 744px;
+  display: flex;
+  background: #e5e5e5;
+}
+.contacts {
+  width: 315px;
+  height: 680px;
+  font-size: 14px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  color: #6f6868;
+  background: #ffffff;
+  border-radius: 10px;
+  margin-left: 42px;
+  margin-top: 32px;
+}
+.me {
+  width: 315px;
+  height: 54px;
+  background: #def0ff;
+  display: flex;
+  align-items: center;
+}
+.me img,
+.contact img {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  margin-left: 14px;
+  /* height: 40px; */
+}
+.me h5 {
+  color: #384047;
+  margin-left: 23px;
+}
+.myStar {
+  margin-left: 150px;
+  color: #979797;
+}
+.contact {
+  display: flex;
+  align-items: center;
+}
+.contact h5 {
+  color: #6f6868;
+  margin-left: 23px;
 }
