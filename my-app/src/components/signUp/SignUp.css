@@ -18,6 +18,20 @@
   color: #919eab;
   cursor: pointer;
 }
+.icon {
+  width: 70px;
+  height: 60px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+}
+.icon:hover {
+  background: #ffffff;
+  opacity: 0.3;
+  border-left: 2px solid #ffffff;
+}
 .main {
   width: 1294px;
   height: 816px;
@@ -95,13 +109,13 @@
   margin-left: 42px;
   margin-top: 32px;
 }
-.me {
+/* .me {
   width: 315px;
   height: 54px;
   background: #def0ff;
   display: flex;
   align-items: center;
-}
+} */
 .me img,
 .contact img {
   width: 40px;
@@ -121,8 +135,302 @@
 .contact {
   display: flex;
   align-items: center;
+  /* border-radius: 10px; */
+}
+.contact:hover {
+  background: #def0ff;
+  border-left: 3px solid #0ab0e2;
+  cursor: pointer;
 }
 .contact h5 {
   color: #6f6868;
   margin-left: 23px;
+}
+.aboutContact {
+  width: 230px;
+  height: 515px;
+  margin-left: 38px;
+  margin-top: 32px;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  border-radius: 10px;
+}
+.onContact img {
+  width: 200px;
+  height: 260px;
+  margin-top: 15px;
+  /* text-align: center; */
+}
+.createEvent {
+  width: 200px;
+  height: 36px;
+  color: #1d9bf0;
+  border: 1px solid #1d9bf0;
+  border-radius: 16px;
+  text-align: center;
+  font-size: 15px;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  margin-top: 16px;
+  background: #ffffff;
+  cursor: pointer;
+}
+.common {
+  width: 200px;
+  height: 56px;
+  margin-top: 24px;
+}
+.common h5 {
+  font-size: 12px;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  color: #384047;
+  margin-top: 0;
+  margin-bottom: 6px;
+}
+.common img {
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
+  margin-right: 3px;
+  cursor: pointer;
+}
+.tags {
+  width: 200px;
+  height: 53px;
+  padding-left: 0;
+  margin-top: 22px;
+}
+.iconTag {
+  display: flex;
+  color: #aab4bd;
+
+  /* margin-top: 22px; */
+  margin-bottom: 0;
+  /* padding-bottom: 0; */
+}
+.iconTag h5 {
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 5px;
+  font-size: 15px;
+  font-weight: 400;
+  font-family: "Lato", sans-serif;
+}
+.tagsButton {
+  margin-top: 7px;
+}
+.tagsButton button {
+  background: #e6f7ff;
+  border: none;
+  border-radius: 3px;
+  font-size: 14px;
+  font-weight: 400;
+  font-family: "Lato", sans-serif;
+  color: #384047;
+  margin-right: 10px;
+  cursor: pointer;
+  height: 26px;
+}
+.contactInfo {
+  width: 559px;
+  height: 680px;
+  background: #ffffff;
+  margin-top: 32px;
+  margin-left: 39px;
+  border-radius: 10px;
+}
+.contactName {
+  width: 559px;
+  height: 95px;
+}
+.contactName h2 {
+  font-size: 24px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  color: #384047;
+  padding: 29px 394px 3px 24px;
+  margin: 0;
+}
+.contactName h5 {
+  font-size: 15px;
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  color: #aab4bd;
+  padding: 0 335px 20px 24px;
+  margin: 0;
+}
+.contactNav {
+  width: 559px;
+  height: 30px;
+  /* display: flex; */
+}
+.contactNav button {
+  width: 77px;
+  height: 30px;
+  background: #ffffff;
+  border: none;
+  margin-left: 24px;
+  font-size: 14px;
+  font-weight: 400;
+  font-family: "Lato", sans-serif;
+  color: #626e78;
+}
+.contactNav button:hover {
+  background: #1d9bf0;
+  color: #ffffff;
+  border-radius: 16px;
+  cursor: pointer;
+}
+.phone {
+  width: 559px;
+  height: 55px;
+  display: flex;
+  padding-top: 30px;
+}
+.phoneIcon {
+  color: #919eab;
+  width: 17px;
+  height: 17px;
+  transform: rotate(90deg);
+  margin-left: 25px;
+}
+.phoneText {
+  color: #aab4bd;
+  font-size: 15px;
+  font-weight: 400;
+  font-family: "Lato", sans-serif;
+  margin-left: 15px;
+}
+.phoneNumber {
+  color: #384047;
+  font-size: 14px;
+  font-weight: 400;
+  font-family: "Lato", sans-serif;
+  margin-left: 93px;
+}
+.mail {
+  width: 559px;
+  height: 40px;
+  display: flex;
+}
+.mailIcon,
+.siteIcon,
+.socialIcon,
+.birthIcon,
+.locationIcon,
+.educationIcon,
+.workIcon {
+  color: #919eab;
+  width: 17px;
+  height: 17px;
+  margin-left: 25px;
+}
+.webSite {
+  width: 559px;
+  height: 45px;
+  display: flex;
+}
+.siteName {
+  color: #384047;
+  font-size: 14px;
+  font-weight: 400;
+  font-family: "Lato", sans-serif;
+  margin-left: 80px;
+}
+.social {
+  width: 559px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+}
+.socialName {
+  width: 100px;
+  height: 24px;
+  margin-left: 95px;
+  display: flex;
+  justify-content: space-between;
+}
+.twitter {
+  color: #ffffff;
+  background: #55acee;
+  border-radius: 100%;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+.facebook {
+  background: #ffffff;
+  color: #3b5998;
+  border-radius: 100%;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+.linkedin {
+  background: #0077b5;
+  color: #ffffff;
+  border-radius: 100%;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+.birthday {
+  width: 559px;
+  height: 40px;
+  display: flex;
+}
+.birthName {
+  color: #384047;
+  font-size: 14px;
+  font-weight: 400;
+  font-family: "Lato", sans-serif;
+  margin-left: 24px;
+}
+.location {
+  width: 559px;
+  height: 90px;
+  display: flex;
+}
+.locationName {
+  color: #384047;
+  font-size: 14px;
+  font-weight: 400;
+  font-family: "Lato", sans-serif;
+  margin-left: 80px;
+}
+.phoneNumber div,
+.locationName div {
+  margin-bottom: 5px;
+}
+.education {
+  width: 559px;
+  height: 83px;
+  display: flex;
+}
+.educationName,
+.workName {
+  color: #384047;
+  font-size: 14px;
+  font-weight: 400;
+  font-family: "Lato", sans-serif;
+  margin-left: 70px;
+}
+.work {
+  width: 559px;
+  height: 85px;
+  display: flex;
+}
+.grey {
+  font-size: 13px;
+  color: #aab4bd;
+  font-weight: 400;
+  font-family: "Lato", sans-serif;
+}
+.educationName div,
+.workName div {
+  margin-bottom: 2px;
 }
