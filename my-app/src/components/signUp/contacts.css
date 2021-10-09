@@ -1,0 +1,44 @@
+.contacts {
+  width: 315px;
+  height: 680px;
+  font-size: 14px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+
+  background: #ffffff;
+  border-radius: 10px;
+  margin-left: 42px;
+  margin-top: 32px;
+}
+.me img,
+.contact img {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  margin-left: 14px;
+  /* height: 40px; */
+}
+/* .me h5 {
+    color: #384047;
+    margin-left: 23px;
+  } */
+/* .myStar {
+    margin-left: 150px;
+    color: #979797;
+  } */
+.contact {
+  display: flex;
+  align-items: center;
+  /* border-radius: 10px; */
+}
+.contact:hover {
+  background: #def0ff;
+  border-left: 3px solid #0ab0e2;
+  cursor: pointer;
+}
+.contact h5 {
+  /* color: #384047; */
+  color: #6f6868;
+  font-weight: 400;
+  margin-left: 23px;
+}

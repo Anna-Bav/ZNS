@@ -1,0 +1,30 @@
+.navigation {
+  width: 72px;
+  height: 816px;
+  background: #001429;
+  position: absolute;
+}
+.icons {
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 25px;
+  color: #919eab;
+  cursor: pointer;
+}
+.icon {
+  width: 70px;
+  height: 60px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+}
+.icon:hover {
+  background: #ffffff;
+  opacity: 0.3;
+  border-left: 2px solid #ffffff;
+}

@@ -1,10 +1,12 @@
 import React from "react";
+import './NuvBar.css'
 import { FaBars } from 'react-icons/fa';
 import { FaHome } from 'react-icons/fa';
 import { FaUser } from 'react-icons/fa';
 import { FaStar } from 'react-icons/fa';
 import { FaClipboard } from 'react-icons/fa';
 import { FaCog } from 'react-icons/fa';
+
 
 export default function NuvBar(){
     return(

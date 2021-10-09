@@ -1,5 +1,5 @@
 import React  from "react";
-import './SignUp.css'
+import './contacts.css'
 
 
 export default function Contacts(){
