@@ -2,11 +2,13 @@
   margin: 0 auto;
   box-sizing: border-box;
   display: flex;
+  margin-left: 10%;
 }
 .navigation {
   width: 72px;
   height: 816px;
   background: #001429;
+  position: absolute;
 }
 .icons {
   height: 400px;

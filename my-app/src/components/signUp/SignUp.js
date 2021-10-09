@@ -3,11 +3,7 @@ import './SignUp.css'
 // import { farBars } from "@fortawesome/free-regular-svg-icons";
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // import { farBars } from "react-icons/fa";
-import { FaBars } from 'react-icons/fa';
-import { FaHome } from 'react-icons/fa';
-import { FaUser } from 'react-icons/fa';
-import { FaStar } from 'react-icons/fa';
-import { FaClipboard } from 'react-icons/fa';
+
 import { FaCog } from 'react-icons/fa';
 import {FaSearch} from 'react-icons/fa';
 import {FaSlidersV} from 'react-icons/fa';
@@ -23,6 +19,8 @@ import {FaGift} from 'react-icons/fa';
 import {FaMapMarkerAlt} from 'react-icons/fa';
 import {FaGraduationCap} from 'react-icons/fa';
 import {FaSuitcase} from 'react-icons/fa';
+import Contacts from './contacts';
+import NuvBar from './NuvBar';
 
 
 
@@ -34,16 +32,7 @@ export default function SignUp(){
     return(
 
     <div className='page'>
-        <nav className='navigation'>
-        <div className='icons'>
-        <div className='icon'><FaBars  /></div>
-        <div className='icon'><FaHome /></div>
-        <div className='icon'><FaUser /></div>
-        <div className='icon'><FaStar /></div>
-        <div className='icon'><FaClipboard /></div>
-        <div className='icon'><FaCog /></div>
-        </div>
-        </nav>
+
         <div className='main'>
         <div className='search'>
             <div><img className='av' src='/images/avatar.png'/></div>
@@ -57,56 +46,11 @@ export default function SignUp(){
             </div>
         </div>
         <div className='content'>
-            <div className='contacts'>
-                <div className='contact'>
-                    <img src='/images/me_cut.png'/>
-                    <h5>Eleanor Pena</h5>
-                    {/* <FaStar className='myStar' /> */}
-                </div>
-
-                <div className='contact'>
-                    <img src='/images/1.png'/>
-                    <h5>Wade Warren</h5>
-                </div>
-                <div className='contact'>
-                <img src='/images/2.png'/>
-                    <h5>Esther Howard</h5>
-                </div>
-                <div className='contact'>
-                <img src='/images/3.png'/>
-                    <h5>Cameron Williamson</h5>
-                </div>
-                <div className='contact'>
-                <img src='/images/4.png'/>
-                    <h5>Leslie Alexander</h5>
-                </div>
-                <div className='contact'>
-                <img src='/images/5.png'/>
-                    <h5>Jenny Wilson</h5>
-                </div>
-                <div className='contact'>
-                <img src='/images/6.png'/>
-                    <h5>Robert Fox</h5>
-                </div>
-                <div className='contact'>
-                <img src='/images/7.png'/>
-                    <h5>Jacob Jones</h5>
-                </div>
-                <div className='contact'>
-                <img src='/images/8.png'/>
-                    <h5>Kristin Watson</h5>
-                </div>
-                <div className='contact'>
-                <img src='/images/9.png'/>
-                    <h5>Arlene McCoy</h5>
-                </div>
-                <div className='contact'>
-                <img src='/images/10.png'/>
-                    <h5>Savannah Nquyen</h5>
-                </div>
-
-
-            </div>
+            {/* {contacts.map(i=>(
+                <div>{i.name}</div>
+                <div><img scr={i.link}/></img></div>
+            ))} */}
+           <Contacts/>
             <div className='aboutContact'>
                 <div className='onContact'>
                     <img src='/images/me.png'/>

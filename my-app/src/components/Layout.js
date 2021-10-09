@@ -7,12 +7,14 @@ import {
     Route
   } from 'react-router-dom'
 import SignUp from './signUp/SignUp'
+import NuvBar from './signUp/NuvBar'
 
 
 export default function Layout(){
    
     return(
         <BrowserRouter>
+        <NuvBar/>
         <Switch>
             <Route exact path='/' render={()=><Login/>}/>
             <Route path='/signup' render={()=><SignUp/>}/>
