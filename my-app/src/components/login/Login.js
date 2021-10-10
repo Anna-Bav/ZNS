@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect} from 'react'
 import './Login.css'
 import axios from 'axios'
 import {Link} from 'react-router-dom'
@@ -14,16 +14,40 @@ export default function Login(){
     const [passwordDirty, setPasswordDirty] = useState(false)
     const [emailError, setEmailError] = useState('Емейл не может быть пустым')
     const [passwordError, setPasswordError] = useState('Пароль не может быть пустым')
+    const [formValid, setFormValid] = useState(false)
+    const [redirect, SetRedirect] = useState(false)
 
+
+    useEffect( () => {
+        if (emailError || passwordError) {
+            setFormValid (false)
+        } else {
+            setFormValid (true)
+        }
+        }, [emailError, passwordError])
 
 
     function postData(){
         // console.log('ok');
         // <Redirect to='/signup'></Redirect>
-        axios.post('http://zns-web.herokuapp.com/user/registration', {email, password, name})
-        .then(data=>console.log(data))
-        .catch(error=>console.log(error))
+        axios
+        .post('http://zns-web.herokuapp.com/user/registration', {
+            email, 
+            password, 
+            name
+        })
+        .then((data) => {
+            console.log(data);
+            if (data.status == 200) {
+                SetRedirect(true);
+            }
+        })
+        .catch((error) => console.log(error));
     }
+    if (redirect) {
+        return <Redirect to='/signup' />;
+    }
+    
 
     const emailHandler = (e) => {
         setEmail(e.target.value)
@@ -68,7 +92,7 @@ export default function Login(){
             <div className='inputPassword'><input onChange = {e => passwordHandler(e)} value={password} onBlur = {e => blurHandler(e)} name='password'  type='text' placeholder='password'/></div>
             <div class='inputName'><input type='text' placeholder='name' onChange={(e)=>setName(e.target.value)}/></div>
             <Link className='button' to='/signup'>
-                <button onClick={postData}>Зарегистрироваться</button>
+               <button disabled={!formValid} onClick={postData}>Зарегистрироваться</button>
             </Link>
 
         </div>

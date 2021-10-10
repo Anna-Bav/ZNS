@@ -8,6 +8,11 @@ import {
   } from 'react-router-dom'
 import SignUp from './signUp/SignUp'
 import NuvBar from './signUp/NuvBar'
+import Home from './Home/Home'
+import Favorites from './favorites/Favorites'
+import Notes from './Notes/Notes'
+import Settings from './Settings/Settings'
+
 
 
 export default function Layout(){
@@ -16,8 +21,13 @@ export default function Layout(){
         <BrowserRouter>
         <NuvBar/>
         <Switch>
-            <Route exact path='/' render={()=><Login/>}/>
+            <Route exact path='/' render={()=><Login />}/>
+            <Route path='/home' render={()=><Home/>}/>
             <Route path='/signup' render={()=><SignUp/>}/>
+            <Route path='/favorites' render={()=><Favorites/>}/>
+            <Route path='/notes' render={()=><Notes/>}/>
+            <Route path='/settings' render={()=><Settings/>}/>
+            
         </Switch>
         </BrowserRouter>
     )
