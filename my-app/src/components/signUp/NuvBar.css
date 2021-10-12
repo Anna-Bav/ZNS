@@ -17,6 +17,7 @@
 .icon {
   width: 70px;
   height: 60px;
+  color: #919eab;
   text-align: center;
   display: flex;
   justify-content: center;
@@ -24,7 +25,7 @@
   opacity: 1;
 }
 .icon:hover {
-  background: #ffffff;
-  opacity: 0.3;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
   border-left: 2px solid #ffffff;
 }
