@@ -31,7 +31,7 @@ export default function Login(){
         // console.log('ok');
         // <Redirect to='/signup'></Redirect>
         axios
-        .post('http://zns-web.herokuapp.com/user/registration', {
+        .post('http://b8e6-93-84-17-237.ngrok.io/user/registration', {
             email, 
             password, 
             // name
