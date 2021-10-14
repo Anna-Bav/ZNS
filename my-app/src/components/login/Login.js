@@ -4,13 +4,17 @@ import axios from 'axios'
 import {Link} from 'react-router-dom'
 import {Redirect} from 'react-router-dom'
 import {useDispatch} from 'react-redux'
+import {FaGoogle} from 'react-icons/fa';
+import {FaLinkedin} from 'react-icons/fa';
+import {FaFacebookSquare} from 'react-icons/fa';
+
 
 
 export default function Login(){
 
     const [email, setEmail] = useState()  
     const [password, setPassword] = useState()
-    const dispatch = useDispatch()
+    // const [dispatch, setDispatch] = useDispatch()
     // const [name, setName] = useState()
     const [emailDirty, setEmailDirty] = useState(false)
     const [passwordDirty, setPasswordDirty] = useState(false)
@@ -32,9 +36,9 @@ export default function Login(){
     function postData(){
         // console.log('ok');
         // <Redirect to='/signup'></Redirect>
-        return async dispatch => {
+        // return async dispatch => {
 
-        }
+        // }
         axios
         .post('http://b8e6-93-84-17-237.ngrok.io/user/registration', {
             email, 
@@ -91,17 +95,44 @@ export default function Login(){
     }
 
     return(
-        <div>
-            <h1 className='login'>Зарегистрироваться</h1>
-            {(emailDirty && emailError) && <div style={{color:'red', textAlign:'center'}}>{emailError}</div>}
-            <div className='inputEmail'><input onChange = {e => emailHandler(e)} value={email} onBlur = {e => blurHandler(e)} name='email' type='text' placeholder='email'/></div>
+        <div className='registration'>
+            <div className='registration_inner'>
+            <div className='log_reg'>
+                <h1 className='login'>Вход</h1>
+                <h1 className='login'>Регистрация</h1>
+            </div>
+            <div className="create">Создать аккаунт</div>
+            <div className='forms'>{(emailDirty && emailError) && <div style={{color:'red', textAlign:'center'}}>{emailError}</div>}
+            <h3>Введите адрес электронной почты</h3>
+            <div className='inputEmail'><input onChange = {e => emailHandler(e)} value={email} onBlur = {e => blurHandler(e)} name='email' type='text' placeholder='Введите Ваш e-mail'/></div>
             {(passwordDirty && passwordError) && <div style={{color:'red', textAlign:'center'}}>{passwordError}</div>}
-            <div className='inputPassword'><input onChange = {e => passwordHandler(e)} value={password} onBlur = {e => blurHandler(e)} name='password'  type='text' placeholder='password'/></div>
+            <h3>Пароль</h3>
+            <div className='inputPassword'><input onChange = {e => passwordHandler(e)} value={password} onBlur = {e => blurHandler(e)} name='password'  type='text' placeholder='Введите пароль'/></div>
             {/* <div class='inputName'><input type='text' placeholder='name' onChange={(e)=>setName(e.target.value)}/></div> */}
-            <Link className='button' to='/signup'>
-               <button disabled={!formValid} onClick={dispatch(Login(email,password))}>Зарегистрироваться</button>
-            </Link>
+            </div>
+            {/* <Link className='button' to='/signup'> */}
+            <div className='button'>
+               <button disabled={!formValid} onClick={Login}>Зарегистрироваться</button>
+               </div>
+            {/* </Link> */}
 
+            <div className='user_terms'>
+                <div className='square'></div>
+                <div className='terms_text'>Подтверждаю, что ознакомлен, полностью согласен и принимаю условия <a href='#'>Пользовательского соглашения</a></div>
+            </div>
+            <div className='enter'>
+                или войти через
+            </div>
+            <div className='seti'>
+                <FaGoogle className='seti_google'/>
+                <FaLinkedin className='seti_linkedin'/>
+                <FaFacebookSquare className='seti_facebook'/>
+            </div>
+
+
+
+            </div>
+            
         </div>
     )
 }
