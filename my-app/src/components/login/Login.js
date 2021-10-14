@@ -3,12 +3,14 @@ import './Login.css'
 import axios from 'axios'
 import {Link} from 'react-router-dom'
 import {Redirect} from 'react-router-dom'
+import {useDispatch} from 'react-redux'
 
 
 export default function Login(){
 
     const [email, setEmail] = useState()  
     const [password, setPassword] = useState()
+    const dispatch = useDispatch()
     // const [name, setName] = useState()
     const [emailDirty, setEmailDirty] = useState(false)
     const [passwordDirty, setPasswordDirty] = useState(false)
@@ -30,6 +32,9 @@ export default function Login(){
     function postData(){
         // console.log('ok');
         // <Redirect to='/signup'></Redirect>
+        return async dispatch => {
+
+        }
         axios
         .post('http://b8e6-93-84-17-237.ngrok.io/user/registration', {
             email, 
@@ -42,8 +47,10 @@ export default function Login(){
                 SetRedirect(true);
             }
         })
+        
         .catch((error) => console.log(error));
     }
+    
     if (redirect) {
         return <Redirect to='/signup' />;
     }
@@ -92,7 +99,7 @@ export default function Login(){
             <div className='inputPassword'><input onChange = {e => passwordHandler(e)} value={password} onBlur = {e => blurHandler(e)} name='password'  type='text' placeholder='password'/></div>
             {/* <div class='inputName'><input type='text' placeholder='name' onChange={(e)=>setName(e.target.value)}/></div> */}
             <Link className='button' to='/signup'>
-               <button disabled={!formValid} onClick={postData}>Зарегистрироваться</button>
+               <button disabled={!formValid} onClick={dispatch(Login(email,password))}>Зарегистрироваться</button>
             </Link>
 
         </div>
