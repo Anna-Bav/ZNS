@@ -53,8 +53,8 @@ export default function Landing() {
                 <div className='header_2_nav'>
                     <button>Функции</button>
                     <button>Контакты</button>
-                    <button>Вход</button>
-                    <Link to='/login'><button>Регистрация</button></Link>
+                    <Link to='/login'><button>Вход</button></Link>
+                    <Link to='/registration'><button>Регистрация</button></Link>
                     <button>Ru</button>
                 </div>
                 <div className='pictures'>

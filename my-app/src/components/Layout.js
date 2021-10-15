@@ -1,12 +1,14 @@
 import React from 'react'
 import Landing from './landing/Landing'
 import Login from './login/Login'
+import Registration from './registration/Registration'
 import { 
     BrowserRouter, 
     BrowserRouter as Router, 
     Switch,
     Route
   } from 'react-router-dom'
+import {useSelector} from 'react-redux'
 import SignUp from './signUp/SignUp'
 import NuvBar from './signUp/NuvBar'
 import Home from './Home/Home'
@@ -14,11 +16,13 @@ import Favorites from './favorites/Favorites'
 import Notes from './Notes/Notes'
 import Settings from './Settings/Settings'
 
+
 function LoginContainer() {
     return(
         <div className='container'>
             <Route exact path='/' render={()=><Landing />}/>
             <Route path='/login' component={Login}/>
+            <Route path='/registration' component={Registration}/>
             
         </div>
     )
@@ -39,16 +43,18 @@ function DefaultContainer() {
 
 
 export default function Layout(){
-   
+    const isAuth = useSelector(state => state.user.isAuth)
     return(
         <BrowserRouter>
+        {!isAuth &&
         <Switch>
-        <Route exact path='/' component={LoginContainer} />
+            <Route exact path='/' component={LoginContainer} />
             <Route exact path='/(login)' component={LoginContainer} />
+            <Route exact path='/(registration)' component={LoginContainer} />
             <Route component={DefaultContainer} />
-            
-            
         </Switch>
+        }
+        
         </BrowserRouter>
     )
 }
