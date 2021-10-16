@@ -42,7 +42,7 @@ export default function Registration(){
 
         // }
         try {
-        const response = axios
+        const response = () => axios
         .post('http://b8e6-93-84-17-237.ngrok.io/user/registration', {
             email, 
             password, 
@@ -62,10 +62,11 @@ export default function Registration(){
         // .catch((error) => alert(error));
     }
     
+    
     if (redirect) {
         return <Redirect to='/signup' />;
     }
-    
+
 
     const emailHandler = (e) => {
         setEmail(e.target.value)
@@ -112,10 +113,10 @@ export default function Registration(){
             <div className="create">Создать аккаунт</div>
             <div className='forms'>{(emailDirty && emailError) && <div style={{color:'red', textAlign:'center'}}>{emailError}</div>}
             <h3>Введите адрес электронной почты</h3>
-            <div className='inputEmail'><input onChange = {e => emailHandler(e)} value={email} onBlur = {e => blurHandler(e)} name='email' type='text' placeholder='Введите Ваш e-mail'/></div>
+            <div className='inputEmail'><input onChange = {e => emailHandler(e)} value={email} onBlur = {e => blurHandler(e)} name='email' type='email' placeholder='Введите Ваш e-mail'/></div>
             {(passwordDirty && passwordError) && <div style={{color:'red', textAlign:'center'}}>{passwordError}</div>}
             <h3>Пароль</h3>
-            <div className='inputPassword'><input onChange = {e => passwordHandler(e)} value={password} onBlur = {e => blurHandler(e)} name='password'  type='text' placeholder='Введите пароль'/></div>
+            <div className='inputPassword'><input onChange = {e => passwordHandler(e)} value={password} onBlur = {e => blurHandler(e)} name='password'  type='password' placeholder='Введите пароль'/></div>
             {/* <div class='inputName'><input type='text' placeholder='name' onChange={(e)=>setName(e.target.value)}/></div> */}
             </div>
             <Link className='button' to='/signup'>

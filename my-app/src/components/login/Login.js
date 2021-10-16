@@ -120,10 +120,10 @@ export default function Login(){
             <div className="create">Войти в аккаунт</div>
             <div className='forms'>{(emailDirty && emailError) && <div style={{color:'red', textAlign:'center'}}>{emailError}</div>}
             <h3>Введите адрес электронной почты</h3>
-            <div className='inputEmail'><input onChange = {e => emailHandler(e)} value={email} onBlur = {e => blurHandler(e)} name='email' type='text' placeholder='Введите Ваш e-mail'/></div>
+            <div className='inputEmail'><input onChange = {e => emailHandler(e)} value={email} onBlur = {e => blurHandler(e)} name='email' type='email' placeholder='Введите Ваш e-mail'/></div>
             {(passwordDirty && passwordError) && <div style={{color:'red', textAlign:'center'}}>{passwordError}</div>}
             <div className='forget'><h3>Пароль</h3><h4>Забыли пароль?</h4></div>
-            <div className='inputPassword'><input onChange = {e => passwordHandler(e)} value={password} onBlur = {e => blurHandler(e)} name='password'  type='text' placeholder='Введите пароль'/></div>
+            <div className='inputPassword'><input onChange = {e => passwordHandler(e)} value={password} onBlur = {e => blurHandler(e)} name='password'  type='password' placeholder='Введите пароль'/></div>
             {/* <div class='inputName'><input type='text' placeholder='name' onChange={(e)=>setName(e.target.value)}/></div> */}
             </div>
             <div className='remember'>

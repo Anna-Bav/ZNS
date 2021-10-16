@@ -45,7 +45,7 @@ export default function Landing() {
                     <h2>и мессенджеров.</h2>
                 </div>
                 <div className='zns_button'>
-                    <button>Бесплатная регистрация</button>
+                <Link to='/registration'><button>Бесплатная регистрация</button></Link>
                 </div>
             </div>
 
