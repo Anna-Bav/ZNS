@@ -1,5 +1,6 @@
-import React from 'react'
+import React, {useState} from 'react'
 import Landing from './landing/Landing'
+import Header_landing from './landing/header_landing/Header_landing'
 import Login from './login/Login'
 import Registration from './registration/Registration'
 import { 
@@ -18,9 +19,11 @@ import Settings from './Settings/Settings'
 
 
 function LoginContainer() {
+    const [popup, setPopup] = useState(false)
     return(
         <div className='container'>
-            <Route exact path='/' render={()=><Landing />}/>
+            <Route  exact path='/' render={()=><Landing setPopup={setPopup} popup={popup}/>}/>
+            {/* <Route exact path='/header_landing' render={() => <Header_landing setPopup={setPopup} popup={popup}/>}/> */}
             <Route path='/login' component={Login}/>
             <Route path='/registration' component={Registration}/>
             
@@ -43,14 +46,16 @@ function DefaultContainer() {
 
 
 export default function Layout(){
+    // const [popup, setPopup] = useState(false)
+
     const isAuth = useSelector(state => state.user.isAuth)
     return(
         <BrowserRouter>
         {!isAuth &&
         <Switch>
             <Route exact path='/' component={LoginContainer} />
-            <Route exact path='/(login)' component={LoginContainer} />
-            <Route exact path='/(registration)' component={LoginContainer} />
+            <Route path='/(login)' component={LoginContainer} />
+            <Route path='/(registration)' component={LoginContainer} />
             <Route component={DefaultContainer} />
         </Switch>
         }

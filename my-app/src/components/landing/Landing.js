@@ -17,14 +17,21 @@ import {FaGooglePlay} from 'react-icons/fa';
 
 import mapImg from '../../components/mapbase.png'
 import downloadImg from '../../components/download_cut.png'
+import Header_landing from './header_landing/Header_landing'
+import Registration from '../registration/Registration'
 
 
 
 
-export default function Landing() {
+export default function Landing(props) {
+    const {popup} = props;
     return(
+        
         <div className='landing'>
-            <div className='header'>
+             {popup && <Registration />}
+            <Header_landing />
+           
+            {/* <div className='header'>
              <div className='header_1'>
                 <div className='zns'>
                     <div className='emblem'>
@@ -45,7 +52,9 @@ export default function Landing() {
                     <h2>и мессенджеров.</h2>
                 </div>
                 <div className='zns_button'>
-                <Link to='/registration'><button>Бесплатная регистрация</button></Link>
+                <Link to='/registration'>
+                    <button onClick={() => setPopup(!popup)}>Бесплатная регистрация</button>
+                </Link>
                 </div>
             </div>
 
@@ -66,7 +75,7 @@ export default function Landing() {
                     </div>
                 </div>
             </div>
-        </div>
+        </div> */}
 
         <div className='zns_mean'>
             <div className='zns_mean_header'>
