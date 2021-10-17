@@ -12,7 +12,7 @@ export default function Header_Landing(props){
              <div className='header_1'>
                 <div className='zns'>
                     <div className='emblem'>
-                        <div className='name_zns'><h3>zns</h3></div>
+                    <div className='name_zns'><h3>zns</h3></div>
                     </div>
                     <div className='zborka'>
                         <div>zborka</div>

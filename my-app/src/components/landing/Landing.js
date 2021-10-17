@@ -19,7 +19,7 @@ import mapImg from '../../components/mapbase.png'
 import downloadImg from '../../components/download_cut.png'
 import Header_landing from './header_landing/Header_landing'
 import Registration from '../registration/Registration'
-
+import Footer from '../landing/footer/Footer'
 
 
 
@@ -221,7 +221,8 @@ export default function Landing(props) {
         </div>
        </div>
 
-       <footer className='footer'></footer>
+           <Footer/>
+      
         </div>
     )
 }
