@@ -4,7 +4,7 @@ import axios from 'axios'
 import {Link} from 'react-router-dom'
 import {Redirect} from 'react-router-dom'
 import {useDispatch} from 'react-redux'
-// import {useSelector} from 'react-redux';
+import {useSelector} from 'react-redux';
 import {FaGoogle} from 'react-icons/fa';
 import {FaLinkedin} from 'react-icons/fa';
 import {FaFacebookSquare} from 'react-icons/fa';
@@ -15,7 +15,7 @@ export default function Registration(){
 
     const [email, setEmail] = useState()  
     const [password, setPassword] = useState()
-    // const dispatch = useDispatch()
+    const dispatch = useDispatch()
     // const [dispatch, setDispatch] = useDispatch()
     // const [name, setName] = useState()
     const [emailDirty, setEmailDirty] = useState(false)
@@ -36,11 +36,11 @@ export default function Registration(){
 
 
     function registration(email, password){
-        // console.log('ok');
+        console.log('ok');
         // <Redirect to='/signup'></Redirect>
-        // return async dispatch => {
+        return async dispatch => {
 
-        // }
+        }
         try {
         const response = () => axios
         .post('http://b8e6-93-84-17-237.ngrok.io/user/registration', {
@@ -101,7 +101,7 @@ export default function Registration(){
             break
        } 
     }
-    // const isAuth = useSelector(state => state.user.isAuth)
+    const isAuth = useSelector(state => state.user.isAuth)
 
     return(
         <div className='registration'>
@@ -133,9 +133,10 @@ export default function Registration(){
                 или войти через
             </div>
             <div className='seti'>
-                <FaGoogle className='seti_google'/>
-                <FaLinkedin className='seti_linkedin'/>
-                <FaFacebookSquare className='seti_facebook'/>
+            <img src='/images/google.png'/>
+            <img src='/images/linkedin.png'/>
+            <img src='/images/facebook_img.png'/>
+                
             </div>
 
 

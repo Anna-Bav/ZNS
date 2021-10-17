@@ -35,9 +35,9 @@ export default function Footer() {
                
                 </div>
                 <div className='footer_2_seti'>
-                    <div><img src='/images/facebook.png'/> </div>
-                    <div><img src='/images/facebook.png'/></div>
-                    <div><img src='/images/facebook.png'/></div>
+                    <div><img src='/images/Facebook.png'/> </div>
+                    <div><img src='/images/Telegram.png'/></div>
+                    <div><img src='/images/Instagram.png'/></div>
                 </div>
             </div>
             </div>

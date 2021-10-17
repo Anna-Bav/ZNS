@@ -23,7 +23,6 @@ function LoginContainer() {
     return(
         <div className='container'>
             <Route  exact path='/' render={()=><Landing setPopup={setPopup} popup={popup}/>}/>
-            {/* <Route exact path='/header_landing' render={() => <Header_landing setPopup={setPopup} popup={popup}/>}/> */}
             <Route path='/login' component={Login}/>
             <Route path='/registration' component={Registration}/>
             
@@ -46,8 +45,6 @@ function DefaultContainer() {
 
 
 export default function Layout(){
-    // const [popup, setPopup] = useState(false)
-
     const isAuth = useSelector(state => state.user.isAuth)
     return(
         <BrowserRouter>

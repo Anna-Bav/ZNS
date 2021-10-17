@@ -150,7 +150,11 @@
   justify-content: space-around;
   margin-top: 10px;
 }
-.seti_google {
+.seti img {
+  width: 40px;
+  height: 40px;
+}
+/* .seti_google {
   width: 40px;
   height: 40px;
   color: #ff3d00;
@@ -164,4 +168,4 @@
   width: 40px;
   height: 40px;
   color: #395185;
-}
+} */

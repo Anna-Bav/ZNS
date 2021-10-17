@@ -24,12 +24,12 @@ import Footer from '../landing/footer/Footer'
 
 
 export default function Landing(props) {
-    const {popup} = props;
+    const {popup, setPopup} = props;
     return(
         
         <div className='landing'>
              {popup && <Registration />}
-            <Header_landing />
+            <Header_landing popup={popup} setPopup={setPopup} />
            
             {/* <div className='header'>
              <div className='header_1'>

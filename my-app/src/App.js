@@ -8,7 +8,7 @@ import './index.css';
 
 
 function App() {
-    // const isAuth = useSelector(state => state.user.isAuth)
+    const isAuth = useSelector(state => state.user.isAuth)
     return ( 
         <Router>
         <Layout/>

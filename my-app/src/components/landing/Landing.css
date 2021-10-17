@@ -628,10 +628,3 @@
   font-size: 18px;
   font-weight: bold;
 }
-.footer {
-  width: 100%;
-  max-width: 1280px;
-  height: 240px;
-  margin: 0 auto;
-  background: linear-gradient(#0f1015 0%, #0e0d1c 100%);
-}

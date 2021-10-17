@@ -144,9 +144,9 @@ export default function Login(){
                 или войти через
             </div>
             <div className='seti'>
-                <FaGoogle className='seti_google'/>
-                <FaLinkedin className='seti_linkedin'/>
-                <FaFacebookSquare className='seti_facebook'/>
+            <img src='/images/google.png'/>
+            <img src='/images/linkedin.png'/>
+            <img src='/images/facebook_img.png'/>
             </div>
 
 
