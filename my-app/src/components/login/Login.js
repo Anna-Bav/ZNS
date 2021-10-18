@@ -9,6 +9,7 @@ import {FaGoogle} from 'react-icons/fa';
 import {FaLinkedin} from 'react-icons/fa';
 import {FaFacebookSquare} from 'react-icons/fa';
 import { setUser } from '../../reducers/userReducer'
+import {login} from '../../actions/user'
 
 
 
@@ -36,26 +37,26 @@ export default function Login(){
         }, [emailError, passwordError])
 
 
-    function login(email, password){
-        // console.log('ok');
+    // function login(email, password){
+    //     // console.log('ok');
         
 
-        return async dispatch => {
-            try {
-                const response = axios
-                .post('http://b8e6-93-84-17-237.ngrok.io/user/login', {
-                    email, 
-                    password, 
-                    // name
-                })
-                dispatch(setUser((await response).data.user))
-                localStorage.setItem(response.data.token)
-                console.log(response.message)
-            } catch(e) {
-                alert (e)
-            }
-        }
-        }
+    //     return async dispatch => {
+    //         try {
+    //             const response = axios
+    //             .post('http://b8e6-93-84-17-237.ngrok.io/user/login', {
+    //                 email, 
+    //                 password, 
+    //                 // name
+    //             })
+    //             dispatch(setUser((await response).data.user))
+    //             localStorage.setItem(response.data.token)
+    //             console.log(response.message)
+    //         } catch(e) {
+    //             alert (e)
+    //         }
+    //     }
+    //     }
                 
                       
         //     .then((data) => {

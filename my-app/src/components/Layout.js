@@ -1,4 +1,7 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
+import {useDispatch} from 'react-redux'
+
+
 import Landing from './landing/Landing'
 import Header_landing from './landing/header_landing/Header_landing'
 import Login from './login/Login'
@@ -16,6 +19,7 @@ import Home from './Home/Home'
 import Favorites from './favorites/Favorites'
 import Notes from './Notes/Notes'
 import Settings from './Settings/Settings'
+import {auth} from '../actions/user'
 
 
 function LoginContainer() {
@@ -46,6 +50,11 @@ function DefaultContainer() {
 
 export default function Layout(){
     const isAuth = useSelector(state => state.user.isAuth)
+    const dispatch = useDispatch()
+
+    useEffect( () => {
+        dispatch(auth())
+    }, [])
     return(
         <BrowserRouter>
         {!isAuth &&

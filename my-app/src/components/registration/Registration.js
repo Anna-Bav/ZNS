@@ -8,6 +8,7 @@ import {useSelector} from 'react-redux';
 import {FaGoogle} from 'react-icons/fa';
 import {FaLinkedin} from 'react-icons/fa';
 import {FaFacebookSquare} from 'react-icons/fa';
+import  {registration} from '../../actions/user'
 
 
 
@@ -35,37 +36,37 @@ export default function Registration(){
         }, [emailError, passwordError])
 
 
-    function registration(email, password){
-        console.log('ok');
-        // <Redirect to='/signup'></Redirect>
-        return async dispatch => {
+    // function registration(email, password){
+    //     console.log('ok');
+    //     // <Redirect to='/signup'></Redirect>
+    //     return async dispatch => {
 
-        }
-        try {
-        const response = () => axios
-        .post('http://b8e6-93-84-17-237.ngrok.io/user/registration', {
-            email, 
-            password, 
-            // name
-        })
-        alert(response.message)
-    } catch (e) {
-        alert (e.response.data.message)
-    }
-        // .then((data) => {
-        //     console.log(data);
-        //     if (data.status == 200) {
-        //         SetRedirect(true);
-        //     }
-        // })
+    //     }
+    //     try {
+    //     const response = () => axios
+    //     .post('http://b8e6-93-84-17-237.ngrok.io/user/registration', {
+    //         email, 
+    //         password, 
+    //         // name
+    //     })
+    //     alert(response.message)
+    // } catch (e) {
+    //     alert (e.response.data.message)
+    // }
+    //     // .then((data) => {
+    //     //     console.log(data);
+    //     //     if (data.status == 200) {
+    //     //         SetRedirect(true);
+    //     //     }
+    //     // })
         
-        // .catch((error) => alert(error));
-    }
+    //     // .catch((error) => alert(error));
+    // }
     
     
-    if (redirect) {
-        return <Redirect to='/signup' />;
-    }
+    // if (redirect) {
+    //     return <Redirect to='/signup' />;
+    // }
 
 
     const emailHandler = (e) => {
@@ -121,7 +122,7 @@ export default function Registration(){
             </div>
             <Link className='button' to='/signup'>
             <div className='button'>
-               <button disabled={!formValid} onClick={registration}>Зарегистрироваться</button>
+               <button disabled={!formValid} onClick={() => registration(email,password)}>Зарегистрироваться</button>
                </div>
             </Link>
 
