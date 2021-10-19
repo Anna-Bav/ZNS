@@ -19,6 +19,7 @@ import mapImg from '../../components/mapbase.png'
 import downloadImg from '../../components/download_cut.png'
 import Header_landing from './header_landing/Header_landing'
 import Registration from '../registration/Registration'
+import Login from '../login/Login'
 import Footer from '../landing/footer/Footer'
 
 
@@ -29,6 +30,7 @@ export default function Landing(props) {
         
         <div className='landing'>
              {popup && <Registration />}
+             {/* {popup && <Login />} */}
             <Header_landing popup={popup} setPopup={setPopup} />
            
             {/* <div className='header'>

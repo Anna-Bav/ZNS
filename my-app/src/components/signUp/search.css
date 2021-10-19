@@ -10,6 +10,7 @@
   height: 72px;
   display: flex;
   align-items: center;
+  margin-left: 3%;
   /* justify-content: space-around; */
 }
 .av {

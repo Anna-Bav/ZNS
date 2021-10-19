@@ -7,6 +7,9 @@
   margin-top: 85px;
   display: flex;
   align-items: center;
+  position: absolute;
+  left: 40%;
+  z-index: 1000;
 }
 .registration_inner {
   width: 249px;

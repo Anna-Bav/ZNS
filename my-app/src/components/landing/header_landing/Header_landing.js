@@ -42,8 +42,8 @@ export default function Header_Landing(props){
                 <div className='header_2_nav'>
                     <button>Функции</button>
                     <button>Контакты</button>
-                    {!isAuth && <Link to='/login'><button>Вход</button></Link>}
-                    {!isAuth && <Link to='/registration'><button>Регистрация</button></Link>}
+                    {!isAuth && <button onClick={() => setPopup(!popup)}>Вход</button>}
+                    {!isAuth && <button onClick={() => setPopup(!popup)}>Регистрация</button>}
                     {/* {isAuth && <button onClick={() => dispatch(logout())}>Выход</button> */}
                     <button>Ru</button>
                 </div>

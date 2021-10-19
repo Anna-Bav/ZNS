@@ -4,7 +4,7 @@ import {setUser} from '../reducers/userReducer'
 
 export const registration = async (email, password) => {
     try{
-        const response = await axios.post('http://b8e6-93-84-17-237.ngrok.io/user/registration',{
+        const response = await axios.post('https://zns-web.herokuapp.com/user/registration',{
             email,
             password
         })
@@ -18,7 +18,7 @@ export const registration = async (email, password) => {
 export const login = (email, password) => {
     return async dispatch => {
         try{
-            const response = await axios.post('http://b8e6-93-84-17-237.ngrok.io/user/login',{
+            const response = await axios.post('https://zns-web.herokuapp.com/user/login',{
                 email,
                 password
             })

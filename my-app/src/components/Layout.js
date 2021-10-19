@@ -15,6 +15,7 @@ import {
 import {useSelector} from 'react-redux'
 import SignUp from './signUp/SignUp'
 import NuvBar from './signUp/NuvBar'
+import Search from './signUp/search'
 import Home from './Home/Home'
 import Favorites from './favorites/Favorites'
 import Notes from './Notes/Notes'
@@ -37,6 +38,7 @@ function DefaultContainer() {
     return(
         <div>
            <NuvBar/>
+           <Search />
            <Route path='/home' render={()=><Home/>}/>
             <Route path='/signup' render={()=><SignUp/>}/>
             <Route path='/favorites' render={()=><Favorites/>}/>

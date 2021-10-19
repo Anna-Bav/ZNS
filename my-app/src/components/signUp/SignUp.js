@@ -14,7 +14,7 @@ export default function SignUp(){
     <div className='page'>
 
         <div className='main'>
-        <Search />
+        {/* <Search /> */}
         <div className='content'>
             
             {/* {contacts.map(i=>(
