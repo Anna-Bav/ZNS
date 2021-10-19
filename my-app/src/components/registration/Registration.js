@@ -108,8 +108,12 @@ export default function Registration(){
         <div className='registration'>
             <div className='registration_inner'>
             <div className='log_reg'>
-            <Link to='./login'><h1 className='login'>Вход</h1></Link>
-                <Link to='./registration'><h1 className='login'>Регистрация</h1></Link>
+            {/* <Link to='./login'> */}
+                <h1 className='login'>Вход</h1>
+            {/* </Link>
+            <Link to='./registration'> */}
+                <h1 className='login'>Регистрация</h1>
+            {/* </Link> */}
             </div>
             <div className="create">Создать аккаунт</div>
             <div className='forms'>{(emailDirty && emailError) && <div style={{color:'red', textAlign:'center'}}>{emailError}</div>}

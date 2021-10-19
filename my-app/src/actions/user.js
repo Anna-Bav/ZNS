@@ -1,6 +1,7 @@
 
 import axios from 'axios'
 import {setUser} from '../reducers/userReducer'
+import jwt_decode from 'jwt-decode'
 
 export const registration = async (email, password) => {
     try{
@@ -8,11 +9,18 @@ export const registration = async (email, password) => {
             email,
             password
         })
-        alert('успешно')
+        console.log(response)
+        // alert('успешно')
+
+        const token = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTYzNDY2Mzk5MCwianRpIjoiZjE0MDEzOGYtNjQ4MC00ZTg5LWE4NzMtMTY0NzEwMTRiYjkxIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IjYxNmVmZTM2OWVlYmRjYjFiOWUyOWE5MCIsIm5iZiI6MTYzNDY2Mzk5MCwiZXhwIjoxNjM0NzUzOTkwfQ.58uI9mLv4aX_0tf42-TBSLI_jgTrqi-UVHE5QD-Wc18"
+        const decoded = jwt_decode(token);
+        console.log(decoded);
     } catch (e) {
         alert('ошибка')
     }
-    
+
+   
+
 }
 
 export const login = (email, password) => {
@@ -36,7 +44,7 @@ export const login = (email, password) => {
 export const auth = () => {
     return async dispatch => {
         try{
-            const response = await axios.get('http://b8e6-93-84-17-237.ngrok.io/user/auth',
+            const response = await axios.get('https://zns-web.herokuapp.com/user/auth',
             {headers:{Authorization:`Bearer ${localStorage.getItem('token')}`}})
             dispatch(setUser(response.data.user))
             localStorage.setItem('token', response.data.token)

@@ -29,8 +29,9 @@ export default function Landing(props) {
     return(
         
         <div className='landing'>
-             {popup && <Registration />}
-             {/* {popup && <Login />} */}
+            {popup && <Login />}
+            {popup && <Registration />}
+             
             <Header_landing popup={popup} setPopup={setPopup} />
            
             {/* <div className='header'>
