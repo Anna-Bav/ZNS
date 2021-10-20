@@ -1,5 +1,6 @@
 import React  from "react";
 import './search.css'
+import {useSelector} from 'react-redux'
 
 import { FaCog } from 'react-icons/fa';
 import {FaSearch} from 'react-icons/fa';

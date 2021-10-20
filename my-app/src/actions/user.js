@@ -7,8 +7,10 @@ import jwt_decode from 'jwt-decode'
 
 
 export const registration = async (email, password) => {
-    const [redirect, SetRedirect] = useState(false)
+    // const [redirect, SetRedirect] = useState(false)
+    const redirect = false
     try{
+        redirect = true
         const response = await axios.post('https://zns-web.herokuapp.com/user/registration',{
             email,
             password
@@ -18,7 +20,9 @@ export const registration = async (email, password) => {
        
             console.log(data);
             if (data.status == 200) {
-                SetRedirect(true);
+                // SetRedirect(true);
+                redirect=true;
+                <Redirect to='/signup' />;
             }
         })
         alert('успешно')
@@ -33,9 +37,9 @@ export const registration = async (email, password) => {
     
     }
 
-    if (redirect) {
-        <Redirect to='/signup' />;
-        }
+    // if (redirect) {
+    //     <Redirect to='/signup' />;
+    //     }
 
 
 
