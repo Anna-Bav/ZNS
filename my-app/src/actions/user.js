@@ -1,27 +1,43 @@
-
+import React, {useState} from 'react'
+import {Redirect} from 'react-router-dom'
 import axios from 'axios'
 import {setUser} from '../reducers/userReducer'
 import jwt_decode from 'jwt-decode'
 
+
+
 export const registration = async (email, password) => {
+    const [redirect, SetRedirect] = useState(false)
     try{
         const response = await axios.post('https://zns-web.herokuapp.com/user/registration',{
             email,
             password
         })
         console.log(response)
-        // alert('успешно')
+        .then ((data) => {
+       
+            console.log(data);
+            if (data.status == 200) {
+                SetRedirect(true);
+            }
+        })
+        alert('успешно')
 
-        const token = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTYzNDY2Mzk5MCwianRpIjoiZjE0MDEzOGYtNjQ4MC00ZTg5LWE4NzMtMTY0NzEwMTRiYjkxIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IjYxNmVmZTM2OWVlYmRjYjFiOWUyOWE5MCIsIm5iZiI6MTYzNDY2Mzk5MCwiZXhwIjoxNjM0NzUzOTkwfQ.58uI9mLv4aX_0tf42-TBSLI_jgTrqi-UVHE5QD-Wc18"
-        const decoded = jwt_decode(token);
+        let token = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTYzNDY2Mzk5MCwianRpIjoiZjE0MDEzOGYtNjQ4MC00ZTg5LWE4NzMtMTY0NzEwMTRiYjkxIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IjYxNmVmZTM2OWVlYmRjYjFiOWUyOWE5MCIsIm5iZiI6MTYzNDY2Mzk5MCwiZXhwIjoxNjM0NzUzOTkwfQ.58uI9mLv4aX_0tf42-TBSLI_jgTrqi-UVHE5QD-Wc18"
+        let decoded = jwt_decode(token);
         console.log(decoded);
     } catch (e) {
         alert('ошибка')
     }
+     
+    
+    }
 
-   
+    if (redirect) {
+        <Redirect to='/signup' />;
+        }
 
-}
+
 
 export const login = (email, password) => {
     return async dispatch => {

@@ -124,11 +124,11 @@ export default function Registration(){
             <div className='inputPassword'><input onChange = {e => passwordHandler(e)} value={password} onBlur = {e => blurHandler(e)} name='password'  type='password' placeholder='Введите пароль'/></div>
             {/* <div class='inputName'><input type='text' placeholder='name' onChange={(e)=>setName(e.target.value)}/></div> */}
             </div>
-            <Link className='button' to='/signup'>
+            {/* <Link className='button' to='/signup'> */}
             <div className='button'>
                <button disabled={!formValid} onClick={() => registration(email,password)}>Зарегистрироваться</button>
                </div>
-            </Link>
+            {/* </Link> */}
 
             <div className='user_terms'>
                 <div className='square'></div>
