@@ -1,73 +1,76 @@
-import React, {useState, useEffect} from 'react'
-import {useDispatch} from 'react-redux'
+import React, { useState, useEffect } from "react";
+import { useDispatch } from "react-redux";
 
-
-import Landing from './landing/Landing'
-import Header_landing from './landing/header_landing/Header_landing'
-import Login from './login/Login'
-import Registration from './registration/Registration'
-import { 
-    BrowserRouter, 
-    BrowserRouter as Router, 
-    Switch,
-    Route
-  } from 'react-router-dom'
-import {useSelector} from 'react-redux'
-import SignUp from './signUp/SignUp'
-import NuvBar from './signUp/NuvBar'
-import Search from './signUp/search'
-import Home from './Home/Home'
-import Favorites from './favorites/Favorites'
-import Notes from './Notes/Notes'
-import Settings from './Settings/Settings'
-import {auth} from '../actions/user'
-
+import Landing from "./landing/Landing";
+import Header_landing from "./landing/header_landing/Header_landing";
+import Login from "./login/Login";
+import Registration from "./registration/Registration";
+import {
+  BrowserRouter,
+  BrowserRouter as Router,
+  Switch,
+  Route,
+} from "react-router-dom";
+import { useSelector } from "react-redux";
+import SignUp from "./signUp/SignUp";
+import NuvBar from "./signUp/NuvBar";
+import Search from "./signUp/search";
+import Home from "./Home/Home";
+import Favorites from "./favorites/Favorites";
+import Notes from "./Notes/Notes";
+import Settings from "./Settings/Settings";
+import { auth } from "../actions/user";
 
 function LoginContainer() {
-    const [popup, setPopup] = useState(false)
-    return(
-        <div className='container'>
-            <Route  exact path='/' render={()=><Landing setPopup={setPopup} popup={popup}/>}/>
-            <Route path='/login' component={Login}/>
-            <Route path='/registration' component={Registration}/>
-            
-        </div>
-    )
-};
+
+
+  return (
+    <div className="container">
+      <Route
+        exact
+        path="/"
+        render={() => (
+          <Landing
+          
+          />
+        )}
+      />
+      <Route path="/login" component={Login} />
+      <Route path="/registration" component={Registration} />
+    </div>
+  );
+}
 function DefaultContainer() {
-    return(
-        <div>
-           <NuvBar/>
-           <Search />
-           <Route path='/home' render={()=><Home/>}/>
-            <Route path='/signup' render={()=><SignUp/>}/>
-            <Route path='/favorites' render={()=><Favorites/>}/>
-            <Route path='/notes' render={()=><Notes/>}/>
-            <Route path='/settings' render={()=><Settings/>}/>
+  return (
+    <div>
+      <NuvBar />
+      <Search />
+      <Route path="/home" render={() => <Home />} />
+      <Route path="/signup" render={() => <SignUp />} />
+      <Route path="/favorites" render={() => <Favorites />} />
+      <Route path="/notes" render={() => <Notes />} />
+      <Route path="/settings" render={() => <Settings />} />
+    </div>
+  );
+}
 
-        </div>
-    )
-};
+export default function Layout() {
+  const isAuth = useSelector((state) => state.user.isAuth);
+  const dispatch = useDispatch();
 
-
-export default function Layout(){
-    const isAuth = useSelector(state => state.user.isAuth)
-    const dispatch = useDispatch()
-
-    useEffect( () => {
-        dispatch(auth())
-    }, [])
-    return(
-        <BrowserRouter>
-        {!isAuth &&
+  useEffect(() => {
+    dispatch(auth());
+  }, []);
+  return (
+    <BrowserRouter>
+      {!isAuth && (
         <Switch>
-            <Route exact path='/' component={LoginContainer} />
-            <Route path='/(login)' component={LoginContainer} />
-            <Route path='/(registration)' component={LoginContainer} />
-            <Route component={DefaultContainer} />
+          <Route exact path="/" component={LoginContainer} />
+          <Route path="/(login)" component={LoginContainer} />
+          <Route path="/(registration)" component={LoginContainer} />
+          <Route component={DefaultContainer} />
         </Switch>
-        }
-        
-        </BrowserRouter>
-    )
+      )}
+    </BrowserRouter>
+  );
 }

@@ -5,31 +5,33 @@ import {setUser} from '../reducers/userReducer'
 import jwt_decode from 'jwt-decode'
 
 
-
+let redirect = false
 export const registration = async (email, password) => {
     // const [redirect, SetRedirect] = useState(false)
-    const redirect = false
+    
     try{
-        redirect = true
+     
         const response = await axios.post('https://zns-web.herokuapp.com/user/registration',{
             email,
             password
         })
         console.log(response)
-        .then ((data) => {
+        // .then ((data) => {
        
-            console.log(data);
-            if (data.status == 200) {
-                // SetRedirect(true);
-                redirect=true;
-                <Redirect to='/signup' />;
-            }
-        })
+         
+        //     if (data.status == 200) {
+        //         // SetRedirect(true);
+              
+        //         <Redirect to='/signup' />;
+        //     }
+        // })
         alert('успешно')
+        redirect=true;
 
         let token = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTYzNDY2Mzk5MCwianRpIjoiZjE0MDEzOGYtNjQ4MC00ZTg5LWE4NzMtMTY0NzEwMTRiYjkxIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IjYxNmVmZTM2OWVlYmRjYjFiOWUyOWE5MCIsIm5iZiI6MTYzNDY2Mzk5MCwiZXhwIjoxNjM0NzUzOTkwfQ.58uI9mLv4aX_0tf42-TBSLI_jgTrqi-UVHE5QD-Wc18"
         let decoded = jwt_decode(token);
-        console.log(decoded);
+        console.log(decoded)
+       console.log()
     } catch (e) {
         alert('ошибка')
     }
@@ -37,9 +39,9 @@ export const registration = async (email, password) => {
     
     }
 
-    // if (redirect) {
-    //     <Redirect to='/signup' />;
-    //     }
+    if (redirect) {
+        <Redirect to='/signup' />;
+        }
 
 
 
@@ -68,6 +70,7 @@ export const auth = () => {
             {headers:{Authorization:`Bearer ${localStorage.getItem('token')}`}})
             dispatch(setUser(response.data.user))
             localStorage.setItem('token', response.data.token)
+            console.log('response', response)
            
         } catch (e) {
             alert('ошибка')

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import './Landing.css'
 import {Link} from 'react-router-dom'
 import { FaWhatsapp } from 'react-icons/fa';
@@ -25,14 +25,19 @@ import Footer from '../landing/footer/Footer'
 
 
 export default function Landing(props) {
-    const {popup, setPopup} = props;
+    const [popup, setPopup] = useState(false);
+    const [popupReg, setPopupReg] = useState(false);
+    console.log('landingPopup',popup)
     return(
         
         <div className='landing'>
-            {popup && <Login />}
-            {popup && <Registration />}
+            {popup && <Login popup={popup} setPopup={setPopup}   setPopupReg={setPopupReg}
+            popupReg={popupReg}/>}
+            {popupReg && <Registration popup={popup} setPopup={setPopup}   setPopupReg={setPopupReg}
+            popupReg={popupReg}/>}
              
-            <Header_landing popup={popup} setPopup={setPopup} />
+            <Header_landing popup={popup} setPopup={setPopup}   setPopupReg={setPopupReg}
+            popupReg={popupReg}/>
            
             {/* <div className='header'>
              <div className='header_1'>

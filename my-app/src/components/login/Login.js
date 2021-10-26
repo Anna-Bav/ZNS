@@ -13,8 +13,8 @@ import {login} from '../../actions/user'
 
 
 
-export default function Login(){
-
+export default function Login(props){
+    const {popup ,setPopup ,  setPopupReg,popupReg} = props
     const [email, setEmail] = useState()  
     const [password, setPassword] = useState()
     const dispatch = useDispatch()
@@ -26,7 +26,10 @@ export default function Login(){
     const [passwordError, setPasswordError] = useState('Пароль не может быть пустым')
     const [formValid, setFormValid] = useState(false)
     const [redirect, SetRedirect] = useState(false)
-
+    function toggleReg(){
+        setPopupReg(!popupReg)
+        setPopup(!popup)
+    }
 
     useEffect( () => {
         if (emailError || passwordError) {
@@ -119,7 +122,7 @@ export default function Login(){
                     <h1 className='login'>Вход</h1>
                 {/* </Link>
                 <Link to='./registration'> */}
-                    <h1 className='login'>Регистрация</h1>
+                    <h1 className='login' onClick={toggleReg}>Регистрация</h1>
                 {/* </Link> */}
             </div>
             <div className="create">Войти в аккаунт</div>

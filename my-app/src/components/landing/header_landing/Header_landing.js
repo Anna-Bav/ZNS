@@ -1,12 +1,12 @@
 import React from 'react'
-import './Header_landing.css'
+import './header_landing.css'
 import {Link} from 'react-router-dom'
 import {useSelector, useDispatch} from 'react-redux'
 
 
 
 export default function Header_Landing(props){
-    const {setPopup, popup} = props;
+    const {setPopup, popup, popupReg, setPopupReg} = props;
     const dispatch = useDispatch()
     const isAuth = useSelector(state => state.user.isAuth)
     console.log("popup", popup);
@@ -43,7 +43,7 @@ export default function Header_Landing(props){
                     <button>Функции</button>
                     <button>Контакты</button>
                     {!isAuth && <button onClick={() => setPopup(!popup)}>Вход</button>}
-                    {!isAuth && <button onClick={() => setPopup(!popup)}>Регистрация</button>}
+                    {!isAuth && <button onClick={() => setPopupReg(!popupReg)}>Регистрация</button>}
                     {/* {isAuth && <button onClick={() => dispatch(logout())}>Выход</button> */}
                     <button>Ru</button>
                 </div>
