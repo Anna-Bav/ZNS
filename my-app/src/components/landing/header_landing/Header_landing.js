@@ -1,5 +1,5 @@
 import React from 'react'
-import './header_landing.css'
+import './Header_landing.css'
 import {Link} from 'react-router-dom'
 import {useSelector, useDispatch} from 'react-redux'
 
@@ -33,7 +33,7 @@ export default function Header_Landing(props){
                 </div>
                 <div className='zns_button'>
                 {/* <Link to='/registration'> */}
-                    <button onClick={() => setPopup(!popup)}>Бесплатная регистрация</button>
+                    <button onClick={() => setPopupReg(!popupReg)}>Бесплатная регистрация</button>
                 {/* </Link> */}
                 </div>
             </div>

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
+import {Redirect} from 'react-router-dom'
 
 import Landing from "./landing/Landing";
 import Header_landing from "./landing/header_landing/Header_landing";
@@ -26,13 +27,8 @@ function LoginContainer() {
 
   return (
     <div className="container">
-      <Route
-        exact
-        path="/"
-        render={() => (
-          <Landing
-          
-          />
+      <Route exact path="/" render={() => (
+          <Landing />
         )}
       />
       <Route path="/login" component={Login} />
@@ -60,6 +56,10 @@ export default function Layout() {
 
   useEffect(() => {
     dispatch(auth());
+    if (auth) {
+      <Redirect to ='/signup'/>
+
+    }
   }, []);
   return (
     <BrowserRouter>

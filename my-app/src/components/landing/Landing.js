@@ -89,7 +89,7 @@ export default function Landing(props) {
             <div className='zns_mean_header'>
                 <h1>ZNS - что это?</h1>
                 <h4><div>Мы создали удобную платформу для вашей работы с контактами, задачами</div>
-                <div> и планами. Воплотили в реальность .................................</div></h4>
+                <div> и планами. Воплотили в реальность</div></h4>
             </div>
             <div className='zns_mean_wrap'>
                 <div className='zns_mean_inner1'>
@@ -210,7 +210,7 @@ export default function Landing(props) {
             <div><h1>Почему стоит выбрать ZNS?</h1></div>
             <div><h5>Посмотрите 5-минутное видео о преимуществах нашей платформы</h5></div>
             <div>
-                <video width="904" height="462" controls>
+                <video className='video' width="904" height="462" controls>
                  <source src='/video/solarstone.mp4'/>
                 </video>
             </div>
