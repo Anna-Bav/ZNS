@@ -191,7 +191,7 @@
   }
 }
 @media (max-width: 575px) {
-  .zborka {
+  .zborka div {
     font-size: 12px;
   }
   .text_zns {
@@ -222,6 +222,67 @@
     position: relative;
     left: -7.5%;
     top: 17%;
+  }
+  .pic2 img {
+    width: 27.3%;
+  }
+}
+
+@media (max-width: 375px) {
+  .header {
+    height: 590px;
+  }
+  .emblem {
+    width: 20.1%;
+  }
+  .name_zns {
+    left: 12px;
+    top: 30px;
+  }
+  .name_zns h3 {
+    font-size: 17px;
+  }
+  .zborka div {
+    font-size: 10px;
+  }
+  .text_zns {
+    font-size: 12px;
+  }
+  .text_zns h2 {
+    font-size: 10px;
+  }
+  .zns_button {
+    width: 130%;
+    height: 35.8%;
+  }
+  .zns_button button {
+    height: 40px;
+    font-size: 12px;
+  }
+  .header_2_nav {
+    height: 10.2%;
+  }
+  .header_2_nav button {
+    font-size: 7px;
+  }
+  .header_2_nav button:hover {
+    padding: 4px 15px 4px 15px;
+    cursor: pointer;
+  }
+  .pictures {
+    margin-top: 90px;
+  }
+  .pic1 {
+    position: absolute;
+    width: 100%;
+  }
+  .pic1 img {
+    width: 187px;
+  }
+  .pic2 {
+    position: relative;
+    left: 18.5%;
+    top: 28%;
   }
   .pic2 img {
     width: 27.3%;

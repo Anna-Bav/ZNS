@@ -56,7 +56,7 @@ export default function Layout() {
 
   useEffect(() => {
     dispatch(auth());
-    if (auth) {
+    if (isAuth) {
       <Redirect to ='/signup'/>
 
     }

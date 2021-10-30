@@ -203,3 +203,23 @@
     width: 77%;
   }
 }
+
+@media (max-width: 375px) {
+  .footer_1_header {
+    font-size: 7px;
+    margin-top: 35px;
+  }
+  .footer_1_text {
+    font-size: 7px;
+  }
+  .footer_2_inner {
+    width: 95%;
+  }
+  .footer_2_zns {
+    height: 36.7%;
+  }
+  .footer_2_seti {
+    margin-top: 35px;
+    justify-content: space-around;
+  }
+}

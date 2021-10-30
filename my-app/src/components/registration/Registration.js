@@ -117,6 +117,9 @@ export default function Registration(props){
             <Link to='./registration'> */}
                 <h1 className='login'>Регистрация</h1>
             {/* </Link> */}
+            <div className="close">
+                    <img src='/images/close.png'/>
+                </div>
             </div>
             <div className="create">Создать аккаунт</div>
             <div className='forms'>{(emailDirty && emailError) && <div style={{color:'red', textAlign:'center'}}>{emailError}</div>}

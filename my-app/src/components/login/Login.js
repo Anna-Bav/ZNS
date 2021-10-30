@@ -73,9 +73,9 @@ export default function Login(props){
         //     .catch((error) => alert(error));
         // }
         
-        if (redirect) {
-            return <Redirect to='/signup' />;
-        }
+        // if (redirect) {
+        //     return <Redirect to='/signup' />;
+        // }
         
         
     
@@ -124,6 +124,9 @@ export default function Login(props){
                 <Link to='./registration'> */}
                     <h1 className='login' onClick={toggleReg}>Регистрация</h1>
                 {/* </Link> */}
+                <div className="close">
+                    <img src='/images/close.png'/>
+                </div>
             </div>
             <div className="create">Войти в аккаунт</div>
             <div className='forms'>{(emailDirty && emailError) && <div style={{color:'red', textAlign:'center'}}>{emailError}</div>}
