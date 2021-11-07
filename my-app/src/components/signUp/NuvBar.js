@@ -15,6 +15,7 @@ export default function NuvBar(){
         <div className='icons'>
         <div className='icon'><FaBars  /></div>
         <Link to='/home'><div className='icon'><FaHome /></div></Link>
+        {/* <Link to='/noContacts'><div className='icon'><FaUser /></div></Link> */}
         <Link to='/signup'><div className='icon'><FaUser /></div></Link>
         <Link to='/favorites'><div className='icon'><FaStar /></div></Link>
         <Link to='/notes'><div className='icon'><FaClipboard /></div></Link>

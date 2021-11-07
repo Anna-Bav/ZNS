@@ -4,7 +4,12 @@
   display: flex;
   margin-left: 5%;
 }
-
+.main {
+  width: 1294px;
+  height: 816px;
+  display: flex;
+  flex-direction: column;
+}
 .content {
   width: 1294px;
   height: 744px;

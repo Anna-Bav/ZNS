@@ -1,17 +1,11 @@
-.main {
-  width: 1294px;
-  height: 816px;
-  display: flex;
-  flex-direction: column;
-}
-
 .search {
-  width: 1294px;
+  max-width: 1294px;
+  width: 100%;
   height: 72px;
   display: flex;
   align-items: center;
-  margin-left: 3%;
-  /* justify-content: space-around; */
+  margin-left: 6.7%;
+  justify-content: space-around;
 }
 .av {
   width: 40px;
@@ -57,5 +51,12 @@
   width: 20px;
   margin-left: 260px;
   color: #aab4bd;
+  cursor: pointer;
+}
+.ring {
+  margin-left: 30px;
+}
+.ring,
+.plus {
   cursor: pointer;
 }

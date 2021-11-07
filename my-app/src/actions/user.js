@@ -52,11 +52,16 @@ export const login = (email, password) => {
                 email,
                 password
             })
+            const decodedToken = jwt_decode(response.data.token)
+            console.log(decodedToken)
             dispatch(setUser(response.data.user))
             localStorage.setItem('token', response.data.token)
-           
+            console.log("I have token");
+            return <Redirect to='noContacts'/>;
+            // return <Redirect to='SignUp'/>;
+                  
         } catch (e) {
-            alert('ошибка')
+            console.log('token not given')
         }
     }
     

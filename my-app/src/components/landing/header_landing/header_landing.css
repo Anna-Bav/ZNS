@@ -144,6 +144,10 @@
 }
 
 @media (max-width: 990px) {
+  /* .emblem {
+    width: 10.1%;
+    height: 64.75%;
+  } */
   .text_zns {
     font-size: 20px;
   }
@@ -157,6 +161,10 @@
 }
 
 @media (max-width: 770px) {
+  /* .emblem {
+    width: 13.1%;
+    height: 60.75%;
+  } */
   .text_zns {
     font-size: 18px;
   }
@@ -233,7 +241,7 @@
     height: 590px;
   }
   .emblem {
-    width: 20.1%;
+    width: 22.1%;
   }
   .name_zns {
     left: 12px;

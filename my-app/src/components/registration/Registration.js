@@ -117,7 +117,7 @@ export default function Registration(props){
             <Link to='./registration'> */}
                 <h1 className='login'>Регистрация</h1>
             {/* </Link> */}
-            <div className="close">
+            <div className="close" onClick={() => setPopupReg(!popupReg)}>
                     <img src='/images/close.png'/>
                 </div>
             </div>

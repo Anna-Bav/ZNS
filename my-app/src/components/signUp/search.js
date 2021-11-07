@@ -16,8 +16,13 @@ export default function Search(){
             <FaSearch className='imgSearch'/>
         <input className='fieldSearch' type='text' placeholder="Search people, notes, documents, events, tags"/>
         {/* <img className='imgSettings' src='/images/settings.png'/>  */}
-        <FaCog className='imgSettings'/>
+        <img className='imgSettings' src='/images/search_settings.svg'/>
         </div>
-    </div>
+        <div>
+          <img className='plus' src='/images/plus.svg'/>
+          <img className='ring' src='/images/ring.svg'/>
+
+        </div>
+</div>
     )
 }

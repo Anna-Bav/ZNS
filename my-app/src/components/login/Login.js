@@ -124,7 +124,7 @@ export default function Login(props){
                 <Link to='./registration'> */}
                     <h1 className='login' onClick={toggleReg}>Регистрация</h1>
                 {/* </Link> */}
-                <div className="close">
+                <div className="close" onClick={() => setPopup(!popup)}>
                     <img src='/images/close.png'/>
                 </div>
             </div>
@@ -141,7 +141,7 @@ export default function Login(props){
             <div className='square'></div>
             <div className='remember_text'>Запомнить меня</div>
             </div>
-            <Link className='button' to='/signup'>
+            <Link className='button' to='/noContacts'>
             <div className='button'>
                <button disabled={!formValid} onClick={() => dispatch(login(email,password))}>Войти</button>
                </div>

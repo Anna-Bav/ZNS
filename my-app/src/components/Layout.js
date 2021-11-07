@@ -13,6 +13,8 @@ import {
   Route,
 } from "react-router-dom";
 import { useSelector } from "react-redux";
+import NoContacts from "./noContacts/NoContacts";
+import AddContact from "./addContact/AddContact"
 import SignUp from "./signUp/SignUp";
 import NuvBar from "./signUp/NuvBar";
 import Search from "./signUp/search";
@@ -37,11 +39,14 @@ function LoginContainer() {
   );
 }
 function DefaultContainer() {
+  const [popupAdd, setPopupAdd] = useState(false)
   return (
     <div>
       <NuvBar />
       <Search />
       <Route path="/home" render={() => <Home />} />
+      <Route path="/noContacts" render={() => <NoContacts popupAdd={popupAdd} setPopupAdd={setPopupAdd}/>} />
+      <Route path="/AddContact" render={() => <AddContact />} />
       <Route path="/signup" render={() => <SignUp />} />
       <Route path="/favorites" render={() => <Favorites />} />
       <Route path="/notes" render={() => <Notes />} />
@@ -51,13 +56,15 @@ function DefaultContainer() {
 }
 
 export default function Layout() {
+  
   const isAuth = useSelector((state) => state.user.isAuth);
   const dispatch = useDispatch();
 
   useEffect(() => {
     dispatch(auth());
     if (isAuth) {
-      <Redirect to ='/signup'/>
+      <Redirect to ='/noContacts'/>
+      // <Redirect to ='/signup'/>
 
     }
   }, []);
