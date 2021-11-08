@@ -1,3 +1,143 @@
-body {
-  background: green;
+.addContact {
+  width: 1079px;
+  height: 612px;
+  margin: 0 auto;
+  background: #f9f9f9;
+  margin-top: 10px;
+  position: absolute;
+  left: 13.1%;
+  top: 12.5%;
+  border-radius: 16px;
+  z-index: 1000;
+  display: flex;
+}
+.addContact_1 {
+  width: 30.5%;
+  height: 100%;
+}
+.addContact_1 img {
+  width: 100%;
+}
+.addContact_2 {
+  width: 69.5%;
+  height: 100%;
+  border-radius: 16px;
+  display: flex;
+}
+.addNewContact {
+  width: 61.87%;
+  height: 100%;
+}
+.newContactTitle {
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 24px;
+  color: #384047;
+  margin-left: 8.5%;
+  margin-top: 5.2%;
+}
+.newContactText {
+  display: flex;
+  margin-left: 8.5%;
+}
+.newContactText h5 {
+  margin-right: 3.2%;
+  font-family: "Lato", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 16px;
+  color: #aab4bd;
+}
+.newContactText h5:hover {
+  color: #384047;
+  border-bottom: 2px solid #1d9bf0;
+}
+.addFirstName {
+  display: flex;
+  align-items: center;
+
+  margin-left: 8.5%;
+  margin-bottom: 16px;
+}
+.addInputText {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;
+  color: #384047;
+}
+.addFirstName input {
+  width: 257px;
+  height: 35px;
+  margin-left: 17px;
+  background: #ffffff;
+  border: 1px solid #ebeef0;
+  border-radius: 10px;
+}
+.addInfo {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;
+  color: #aab4bd;
+  padding-left: 16px;
+}
+.addPhone,
+.addTextarea {
+  display: flex;
+  align-items: center;
+  margin-left: 8.5%;
+  margin-bottom: 16px;
+}
+.addPhone input {
+  width: 151px;
+  height: 34px;
+  background: #ffffff;
+  border: 1px solid #ebeef0;
+  border-radius: 10px;
+  margin-left: 43px;
+}
+.select {
+  width: 98px;
+  height: 36px;
+  background: #ffffff;
+  border: 1px solid #ebeef0;
+  border-radius: 10px;
+  margin-left: 10px;
+  text-align: center;
+  color: #aab4bd;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;
+}
+.textarea {
+  width: 257px;
+  height: 128px;
+  background: #ffffff;
+  border: 1px solid #ebeef0;
+  border-radius: 10px;
+  margin-left: 46px;
+  color: #aab4bd;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;
+}
+.button_addContact {
+  width: 165px;
+  height: 40px;
+  border-radius: 16px;
+  background: #1d9bf0;
+  color: #ffffff;
+  text-align: center;
+  padding-top: 11px;
+  margin-left: 125px;
+  margin-top: 37px;
+  cursor: pointer;
+}
+.addPhoto {
+  width: 38.13%;
+  height: 100%;
 }
