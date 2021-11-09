@@ -1,9 +1,9 @@
 import React, {useState} from 'react'
 import './AddContact.css'
 
-export default function AddContact(){
+export default function AddContact(props){
     const [value, setValue] = useState('');
-
+    const {popupAdd ,setPopupAdd} = props
     function changeSelect(e) {
         setValue(e.target.value);
     }
@@ -62,7 +62,14 @@ export default function AddContact(){
                     Add contact
                     </div>
                 </div>
-                <div className='addPhoto'></div>
+                <div className='addPhoto'>
+                <img className='addClose' onClick={() => setPopupAdd(!popupAdd)} src='/images/addContact_close.svg'/>
+                <img className='contactAddPhoto' src='/images/addPhoto.svg'/>
+                <div className='tagsBlock'>
+                    <h4>Tags</h4>
+                    <input className='addTags' type='text' placeholder='Enter your tags'/>
+                </div>
+                </div>
             </div>
         </div>
     )

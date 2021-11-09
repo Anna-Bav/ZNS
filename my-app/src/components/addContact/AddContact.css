@@ -140,4 +140,37 @@
 .addPhoto {
   width: 38.13%;
   height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.addClose {
+  width: 6%;
+  margin-top: 16px;
+  margin-left: 250px;
+  cursor: pointer;
+}
+.contactAddPhoto {
+  width: 222px;
+  margin-top: 24px;
+}
+
+.tagsBlock {
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
+}
+.tagsBlock h4 {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;
+  color: #384047;
+}
+.addTags {
+  width: 186px;
+  height: 34px;
+  margin-left: 9px;
+  padding-left: 16px;
+  border: 1px solid #ebeef0;
+  border-radius: 10px;
 }
