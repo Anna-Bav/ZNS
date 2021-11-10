@@ -9,7 +9,7 @@ export default function noContacts(props){
     return(
 
     <div className='noContactsPage'>
-        {popupAdd && <div><AddContact /></div>}
+        {popupAdd && <div><AddContact setPopupAdd={setPopupAdd} popupAdd={popupAdd}/></div>}
         <div className='add_person'>
             <img className='add_img' 
             onClick={() => setPopupAdd(!popupAdd)} 
@@ -21,7 +21,7 @@ export default function noContacts(props){
             </div>
             <div className='add_button'>
             <div><img src='/images/plus_mini.svg'/></div>
-            <div className='add_button_text'>Add new contact </div>
+            <div className='add_button_text' onClick={() => setPopupAdd(!popupAdd)}>Add new contact </div>
             </div>
         </div>
         <div className="import_from">
