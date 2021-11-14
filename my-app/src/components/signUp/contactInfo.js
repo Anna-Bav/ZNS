@@ -12,23 +12,32 @@ import {FaGift} from 'react-icons/fa';
 import {FaMapMarkerAlt} from 'react-icons/fa';
 import {FaGraduationCap} from 'react-icons/fa';
 import {FaSuitcase} from 'react-icons/fa';
+import Info from './Info'
+import ContactName from './ContactName'
+import ContactNav from './ContactNav'
+
 
 export default function ContactInfo(){
     return(
 
    
 <div className='contactInfo'>
-            <div className='contactName'>
+    <ContactName />
+            {/* <div className='contactName'>
                 <h2>Eleanor Pena</h2>
                 <h5>Frontend developer at PTHTS</h5>
-            </div>
-            <div className='contactNav'>
-                <button>Info</button>
+            </div> */}
+            <ContactNav />
+            {/* <div className='contactNav'>
+                <Link to='/Info'><button>Info</button></Link>
                 <button>Notes</button>
                 <button>Files</button>
                 <button>History</button>
-            </div>
-            <div className='phone'>
+            </div> */}
+
+
+            <Info />
+            {/* <div className='phone'>
                 <div className='phoneIcon'><FaPhone /></div>
                 <div className='phoneText'>Phone:</div>
                 <div className='phoneNumber'>
@@ -100,7 +109,7 @@ export default function ContactInfo(){
                     
                     
                 </div>
-            </div>
+            </div> */}
 
             
             </div>

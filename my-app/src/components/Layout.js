@@ -23,6 +23,11 @@ import Favorites from "./favorites/Favorites";
 import Notes from "./Notes/Notes";
 import Settings from "./Settings/Settings";
 import { auth } from "../actions/user";
+import Contacts from './signUp/Contacts'
+import Contact from './signUp/Contact'
+import ContactName from './signUp/ContactName'
+import ContactNav from './signUp/ContactNav'
+import Info from './signUp/Info'
 
 function LoginContainer() {
 
@@ -44,6 +49,7 @@ function DefaultContainer() {
     <div>
       <NuvBar />
       <Search />
+      
       <Route path="/home" render={() => <Home />} />
       <Route path="/noContacts" render={() => <NoContacts popupAdd={popupAdd} setPopupAdd={setPopupAdd}/>} />
       <Route path="/AddContact" render={() => <AddContact />} />
@@ -51,6 +57,19 @@ function DefaultContainer() {
       <Route path="/favorites" render={() => <Favorites />} />
       <Route path="/notes" render={() => <Notes />} />
       <Route path="/settings" render={() => <Settings />} />
+    </div>
+  );
+}
+function Contact_Info() {
+ 
+  return (
+    <div>
+      <Contacts />
+      <Contact />
+      <ContactName />
+      <ContactNav />
+      <Route path="/Info" render={() => <Info />} />
+      
     </div>
   );
 }
@@ -76,6 +95,7 @@ export default function Layout() {
           <Route path="/(login)" component={LoginContainer} />
           <Route path="/(registration)" component={LoginContainer} />
           <Route component={DefaultContainer} />
+          <Route component={Contact_Info}/>
         </Switch>
       )}
     </BrowserRouter>

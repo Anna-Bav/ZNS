@@ -1,0 +1,22 @@
+.contactNav {
+  width: 559px;
+  height: 30px;
+  /* display: flex; */
+}
+.contactNav button {
+  width: 77px;
+  height: 30px;
+  background: #ffffff;
+  border: none;
+  margin-left: 24px;
+  font-size: 14px;
+  font-weight: 400;
+  font-family: "Lato", sans-serif;
+  color: #626e78;
+}
+.contactNav button:hover {
+  background: #1d9bf0;
+  color: #ffffff;
+  border-radius: 16px;
+  cursor: pointer;
+}

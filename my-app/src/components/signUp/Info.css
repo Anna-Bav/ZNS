@@ -1,53 +1,4 @@
-.contactInfo {
-  width: 559px;
-  height: 680px;
-  background: #ffffff;
-  margin-top: 32px;
-  margin-left: 39px;
-  border-radius: 10px;
-}
-/* .contactName {
-  width: 559px;
-  height: 95px;
-}
-.contactName h2 {
-  font-size: 24px;
-  font-family: "Roboto", sans-serif;
-  font-weight: 400;
-  color: #384047;
-  padding: 29px 394px 3px 24px;
-  margin: 0;
-}
-.contactName h5 {
-  font-size: 15px;
-  font-family: "Lato", sans-serif;
-  font-weight: 300;
-  color: #aab4bd;
-  padding: 0 335px 20px 24px;
-  margin: 0;
-} */
-/* .contactNav {
-  width: 559px;
-  height: 30px;
-}
-.contactNav button {
-  width: 77px;
-  height: 30px;
-  background: #ffffff;
-  border: none;
-  margin-left: 24px;
-  font-size: 14px;
-  font-weight: 400;
-  font-family: "Lato", sans-serif;
-  color: #626e78;
-}
-.contactNav button:hover {
-  background: #1d9bf0;
-  color: #ffffff;
-  border-radius: 16px;
-  cursor: pointer;
-} */
-/* .phone {
+.phone {
   width: 559px;
   height: 55px;
   display: flex;
@@ -195,4 +146,4 @@
 .educationName div,
 .workName div {
   margin-bottom: 2px;
-} */
+}

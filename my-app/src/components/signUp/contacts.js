@@ -1,5 +1,5 @@
 import React  from "react";
-import './contacts.css'
+import './Contacts.css'
 
 
 export default function Contacts(){
