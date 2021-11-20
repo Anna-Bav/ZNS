@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './contactInfo.css'
 
 import {FaPhone} from 'react-icons/fa';
@@ -18,6 +18,9 @@ import ContactNav from './ContactNav'
 
 
 export default function ContactInfo(){
+
+    const [notes, setNotes] = useState(false)
+    const [info, setInfo] = useState(true)
     return(
 
    
@@ -27,7 +30,7 @@ export default function ContactInfo(){
                 <h2>Eleanor Pena</h2>
                 <h5>Frontend developer at PTHTS</h5>
             </div> */}
-            <ContactNav />
+            <ContactNav setNotes ={setNotes} setInfo={setInfo}/>
             {/* <div className='contactNav'>
                 <Link to='/Info'><button>Info</button></Link>
                 <button>Notes</button>
@@ -36,7 +39,7 @@ export default function ContactInfo(){
             </div> */}
 
 
-            <Info />
+            <Info notes={notes} info={info}/>
             {/* <div className='phone'>
                 <div className='phoneIcon'><FaPhone /></div>
                 <div className='phoneText'>Phone:</div>

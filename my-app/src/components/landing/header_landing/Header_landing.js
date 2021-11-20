@@ -1,5 +1,5 @@
 import React from 'react'
-import './Header_landing.css'
+import './header_landing.css'
 import {Link} from 'react-router-dom'
 import {useSelector, useDispatch} from 'react-redux'
 

@@ -23,7 +23,7 @@ import Favorites from "./favorites/Favorites";
 import Notes from "./Notes/Notes";
 import Settings from "./Settings/Settings";
 import { auth } from "../actions/user";
-import Contacts from './signUp/Contacts'
+import Contacts from './signUp/contacts'
 import Contact from './signUp/Contact'
 import ContactName from './signUp/ContactName'
 import ContactNav from './signUp/ContactNav'
@@ -67,7 +67,7 @@ function Contact_Info() {
       <Contacts />
       <Contact />
       <ContactName />
-      <ContactNav />
+      {/* <ContactNav /> */}
       <Route path="/Info" render={() => <Info />} />
       
     </div>
