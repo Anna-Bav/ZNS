@@ -13,13 +13,17 @@ import { FaMapMarkerAlt } from "react-icons/fa";
 import { FaGraduationCap } from "react-icons/fa";
 import { FaSuitcase } from "react-icons/fa";
 import Contacts from "./contacts";
-import Notes from "../Notes/Notes";
+import Notes from "../signUp/Notes";
+import Files from '../signUp/Files';
+import History from '../signUp/History'
 
 export default function Info(props) {
-    const {notes, info} = props
+    const {notes, info, files, history} = props
   return (
       <div>
       {notes && <Notes/>}
+      {files && <Files/>}
+      {history && <History/>}
       {info && <div>
         <div className="phone">
           <div className="phoneIcon">
@@ -62,7 +66,7 @@ export default function Info(props) {
           <div className="birthIcon">
             <FaGift />
           </div>
-          <div className="phoneText">Date of berthday:</div>
+          <div className="phoneText">Date of birthday:</div>
           <div className="birthName">8/16</div>
         </div>
   

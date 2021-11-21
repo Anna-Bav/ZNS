@@ -20,14 +20,14 @@ import NuvBar from "./signUp/NuvBar";
 import Search from "./signUp/search";
 import Home from "./Home/Home";
 import Favorites from "./favorites/Favorites";
-import Notes from "./Notes/Notes";
+import Notebook from "./Notebook/Notebook";
 import Settings from "./Settings/Settings";
 import { auth } from "../actions/user";
-import Contacts from './signUp/contacts'
-import Contact from './signUp/Contact'
-import ContactName from './signUp/ContactName'
-import ContactNav from './signUp/ContactNav'
-import Info from './signUp/Info'
+// import Contacts from './signUp/contacts'
+// import Contact from './signUp/Contact'
+// import ContactName from './signUp/ContactName'
+// import ContactNav from './signUp/ContactNav'
+// import Info from './signUp/Info'
 
 function LoginContainer() {
 
@@ -55,24 +55,24 @@ function DefaultContainer() {
       <Route path="/AddContact" render={() => <AddContact />} />
       <Route path="/signup" render={() => <SignUp />} />
       <Route path="/favorites" render={() => <Favorites />} />
-      <Route path="/notes" render={() => <Notes />} />
+      <Route path="/notebook" render={() => <Notebook />} />
       <Route path="/settings" render={() => <Settings />} />
     </div>
   );
 }
-function Contact_Info() {
+// function Contact_Info() {
  
-  return (
-    <div>
-      <Contacts />
-      <Contact />
-      <ContactName />
-      {/* <ContactNav /> */}
-      <Route path="/Info" render={() => <Info />} />
+//   return (
+//     <div>
+//       <Contacts />
+//       <Contact />
+//       <ContactName />
+//       {/* <ContactNav /> */}
+//       <Route path="/Info" render={() => <Info />} />
       
-    </div>
-  );
-}
+//     </div>
+//   );
+// }
 
 export default function Layout() {
   
@@ -95,7 +95,7 @@ export default function Layout() {
           <Route path="/(login)" component={LoginContainer} />
           <Route path="/(registration)" component={LoginContainer} />
           <Route component={DefaultContainer} />
-          <Route component={Contact_Info}/>
+          {/* <Route component={Contact_Info}/> */}
         </Switch>
       )}
     </BrowserRouter>

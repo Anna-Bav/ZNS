@@ -59,7 +59,7 @@ export default function AddContact(props){
                     <div><input className='textarea' name='taxtValue' type='textarea' placeholder='Enter your notes'/></div>
                     </div>
                     <div className='button_addContact'> 
-                    Add contact
+                    <div>Add contact</div>
                     </div>
                 </div>
                 <div className='addPhoto'>

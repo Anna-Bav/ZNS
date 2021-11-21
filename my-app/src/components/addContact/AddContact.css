@@ -126,13 +126,16 @@
   font-size: 14px;
 }
 .button_addContact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 165px;
   height: 40px;
   border-radius: 16px;
   background: #1d9bf0;
   color: #ffffff;
   text-align: center;
-  padding-top: 11px;
+  /* padding-top: 11px; */
   margin-left: 125px;
   margin-top: 37px;
   cursor: pointer;

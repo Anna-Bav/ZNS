@@ -1,13 +1,17 @@
 .contactName {
   width: 559px;
   height: 95px;
+  display: flex;
+  justify-content: space-between;
 }
 .contactName h2 {
   font-size: 24px;
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   color: #384047;
-  padding: 29px 394px 3px 24px;
+  padding-top: 29px;
+  padding-left: 24px;
+  /* padding: 29px 394px 3px 24px; */
   margin: 0;
 }
 .contactName h5 {
@@ -15,6 +19,12 @@
   font-family: "Lato", sans-serif;
   font-weight: 300;
   color: #aab4bd;
-  padding: 0 335px 20px 24px;
+  padding-left: 25px;
+  /* padding: 0 335px 20px 24px; */
   margin: 0;
+}
+.points {
+  margin-top: 17px;
+  margin-right: 17px;
+  cursor: pointer;
 }

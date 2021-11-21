@@ -18,9 +18,11 @@ import ContactNav from './ContactNav'
 
 
 export default function ContactInfo(){
-
-    const [notes, setNotes] = useState(false)
+   
     const [info, setInfo] = useState(true)
+    const [files, setFiles] = useState(false)
+    const [notes, setNotes] = useState(false)
+    const [history, setHistory] = useState(false)
     return(
 
    
@@ -30,7 +32,7 @@ export default function ContactInfo(){
                 <h2>Eleanor Pena</h2>
                 <h5>Frontend developer at PTHTS</h5>
             </div> */}
-            <ContactNav setNotes ={setNotes} setInfo={setInfo}/>
+            <ContactNav setNotes ={setNotes} setInfo={setInfo} setFiles={setFiles} setHistory={setHistory}/>
             {/* <div className='contactNav'>
                 <Link to='/Info'><button>Info</button></Link>
                 <button>Notes</button>
@@ -39,7 +41,7 @@ export default function ContactInfo(){
             </div> */}
 
 
-            <Info notes={notes} info={info}/>
+            <Info notes={notes} info={info} files={files} history={history}/>
             {/* <div className='phone'>
                 <div className='phoneIcon'><FaPhone /></div>
                 <div className='phoneText'>Phone:</div>
