@@ -14,7 +14,9 @@ import {
 } from "react-router-dom";
 import { useSelector } from "react-redux";
 import NoContacts from "./noContacts/NoContacts";
-import AddContact from "./addContact/AddContact"
+import AddContact from "./addContact/AddContact";
+import ContactName from './signUp/ContactName';
+import Points_select from './signUp/Points_select';
 import SignUp from "./signUp/SignUp";
 import NuvBar from "./signUp/NuvBar";
 import Search from "./signUp/search";
@@ -45,6 +47,8 @@ function LoginContainer() {
 }
 function DefaultContainer() {
   const [popupAdd, setPopupAdd] = useState(false)
+  const [popupPoints, setPopupPoints] = useState(false)
+
   return (
     <div>
       <NuvBar />
@@ -53,6 +57,9 @@ function DefaultContainer() {
       <Route path="/home" render={() => <Home />} />
       <Route path="/noContacts" render={() => <NoContacts popupAdd={popupAdd} setPopupAdd={setPopupAdd}/>} />
       <Route path="/AddContact" render={() => <AddContact />} />
+      <Route path="/ContactName" render={() => <ContactName popupPoints={popupPoints} setPopupPoints={setPopupPoints}/>} />
+      <Route path="/Points_select" render={() => <Points_select />} />
+
       <Route path="/signup" render={() => <SignUp />} />
       <Route path="/favorites" render={() => <Favorites />} />
       <Route path="/notebook" render={() => <Notebook />} />

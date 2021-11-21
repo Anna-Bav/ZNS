@@ -1,0 +1,7 @@
+.points_select {
+  width: 100px;
+  height: 50px;
+  background: rgb(226, 173, 173);
+  position: absolute;
+  z-index: 5000;
+}
