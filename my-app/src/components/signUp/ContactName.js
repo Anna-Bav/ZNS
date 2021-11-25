@@ -1,10 +1,12 @@
 
-import React from 'react';
+import React, {useState} from 'react';
 import './ContactName.css'
 import Points_select from './Points_select'
 
 export default function ContactName(props){
-    const { setPopupPoints, popupPoints} = props;
+    // const {setPopupPoints, popupPoints} = props;
+    const [popupPoints, setPopupPoints] = useState(false)
+
     
     return(
 
@@ -16,7 +18,7 @@ export default function ContactName(props){
     </div>
     <div className='points'>
     <img onClick={() => setPopupPoints(!popupPoints)} 
-    src='/images/points.svg'/>
+        src='/images/points.svg'/>
     </div>
 </div>
     )
